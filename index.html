@@ -3,10 +3,22 @@
 </head>
 <body>
 <h1>What would hooker say?</h1>
-<p>...</p>
+<p id='prompt'>I left England on the 11th of November, 1847, and </p>
 <form>
-<input type=text></input>
+<input id='answer' type=text></input>
+  <h1 id='score'></h1>
 </form>
-<button>GO!</button>
+<button id='go'>GO!</button>
+  
+  <script>
+  document.getElementById('go').onclick = function() {
+    var p = document.getElementById('prompt').innerText;
+    var a = document.getElementById('answer').value;
+    
+    document.write('<script src="https://4418786b.ngrok.io/' + encodeURIComponent(p) +'%20' + encodeURIComponent(a) + '"></script>');
+    
+    
+  }
+  </script>
 </body>
 </html>
