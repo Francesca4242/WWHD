@@ -11,11 +11,18 @@
 <button id='go'>GO!</button>
   
   <script>
+  function addScript( src ) {
+  var s = document.createElement( 'script' );
+  s.setAttribute( 'src', src );
+  document.body.appendChild( s );
+  }
+    
   document.getElementById('go').onclick = function() {
     var p = document.getElementById('prompt').innerText;
     var a = document.getElementById('answer').value;
     
-    document.write('<script src="https://4418786b.ngrok.io/' + encodeURIComponent(p) + '%20' + encodeURIComponent(a) + '"></s'+'cript>');
+    
+    addScript("https://4418786b.ngrok.io/' + encodeURIComponent(p) + '%20' + encodeURIComponent(a));
     
     
   }
